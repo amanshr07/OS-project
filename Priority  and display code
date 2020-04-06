@@ -1,0 +1,82 @@
+  for(sum = 0, i = 0; x != 0;)  /* Calculating prority on the account of give input*/
+      { 
+
+		    for(z=0;z<nop;z++)
+		    {
+			int tempx;
+			position=z;
+			for(y=z+1;y<nop;y++)
+			{
+			    if(prio[y]<prio[position])
+				position=y;
+			}
+		 
+		tempx=prio[z];
+	
+		prio[z]=prio[position];
+	
+		prio[position]=tempx;
+		 
+			tempx=time2[z];
+			time2[z]=time2[position];
+			time2[position]=tempx;
+		 			tempx=time1[z];
+				time1[z]=time1[position];
+			time1[position]=tempx;
+
+			tempx=a[z];
+				a[z]=a[position];
+			a[position]=tempx;
+
+			tempx=temp[z];
+				temp[z]=temp[position];
+			temp[position]=tempx;
+		    }
+		{
+		}
+            
+			if(temp[i] <= tq&& temp[i] > 0) 
+            { 
+                  sum = sum + temp[i]; 
+                  temp[i] = 0; 
+                  c = 1; 
+            } 
+            
+			else if(temp[i] > 0) 
+            { 
+                  temp[i] = temp[i] - tq; 
+                  sum = sum + tq; 
+            } 
+
+	for(b=0;b<nop;b++)
+		{
+			if(b==i)
+			prio[b]+=1;
+			else
+			prio[b]+=2;
+		}
+
+            if(temp[i] == 0 && c == 1) 
+            { 
+                  x--; 
+                  printf("\nProcess[%d]\t\t%d\t\t %d\t\t\t %d\t\t   %d", a[i], time2[i], sum - time1[i], sum - time1[i] - time2[i],prio[i]);//calculation
+                  wt = wt + sum - time1[i] - time2[i]; 
+                  tt = tt + sum - time1[i]; 
+                  c = 0; 
+            } 
+            if(i == nop - 1) 
+            {
+                  i = 0; 
+            
+			}
+            else if(time1[i + 1] <= sum) 
+            {
+                  i++;
+            
+			}
+            else 
+            {
+                  i = 0;
+            
+			}		
+      } 
