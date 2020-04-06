@@ -114,10 +114,7 @@ int main()
             
 			}		
       } 
-      awt=wt/nop;
-      att=tt/nop;
-      printf("\n\nAverage Turnaround Time : %.2f",att);
-       printf("\nAverage Waiting Time : %.2f",awt);;      
+          
       
       return 0; 
 }
