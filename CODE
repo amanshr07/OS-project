@@ -4,14 +4,10 @@ int main()
 { 
       int i,sum=0, nop, x, c = 0, tq,y; // declaring variables
       
-	  int wt = 0, tt = 0,position,z,a[10],prio[10], time1[10], time2[10], temp[10],b; /*wt= waiting time
-	                                                                                    tt= turnaround time
-	                                                                                    awt= avg  waiting time
-	                                                                                    att= avg turnaround time*/
-      
+	  int wt = 0, tt = 0,position,z,a[10],prio[10], time1[10], time2[10], temp[10],b; 
 	  double awt, att;
       
-	  printf("\nPlease enter Total number of process you want to calculate for. :"); // entering the details for the calculation
+	  printf("\nPlease enter Total number of process you want to calculate for. :")
       
 	  scanf("%d", &nop); 
       
